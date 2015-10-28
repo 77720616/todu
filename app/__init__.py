@@ -6,7 +6,6 @@ from mongoengine import connect
 app = Flask(__name__)
 app.config.from_object('config')
 
-# db = MongoEngine(app)
-db = connect('todo')
+db = MongoEngine(app)
 
 from app import views,models
